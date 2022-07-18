@@ -1,0 +1,7 @@
+.colorCheckbox{
+    color: white;
+}
+
+.colorCheckbox .colorCheckbox2{
+    color: yellow !important;
+}

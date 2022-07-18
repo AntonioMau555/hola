@@ -1,0 +1,78 @@
+
+#banner{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 65% 1fr;
+  grid-template-areas: "info photo"
+                       "skills photo";
+}
+  .info{
+    grid-area: info;
+    background: white;
+    margin: 50px 0 25px 7%;
+  }
+    .wrapper_info{}
+    .tag_primary{
+      background: #5562FF;
+      height: 54px;
+      border-radius: 15px 0;
+      color: #FFF;
+      padding: 10px 20px;
+    }
+    .wrapper_buttons{
+      display: flex;
+    }
+  .skills{
+    grid-area: skills;
+    background: #262626;
+    padding: 50px 0;
+    align-content: center;
+  }
+
+    .skills_grid{
+      margin: 0 7%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      color: white;
+      column-gap: 20px;
+      row-gap: 10px;
+    }
+    .skills_grid div{
+      align-self: center;
+    }
+
+    .bar{
+      background: #FFD100;
+      height: 8px;
+    }
+  .photo{
+    position: relative;
+    grid-area: photo;
+    background: #DED1C1;
+  }
+    .wrapper_image{
+      background: url(../images/photo.png) center bottom no-repeat;
+      width: 100%;
+      height: 100%;
+    }
+      .logo_python{
+        position: absolute;
+        top: 20px;
+        left: 25%;
+      }
+
+      .logo_react{
+        position: absolute;
+        top: 140px;
+        right: 50px;
+      }
+
+/* Media queries */
+@media screen and (max-width: 480px) {
+  #banner{
+    grid-template-columns: 1fr;
+    grid-template-areas: "info"
+                          "skills"
+                          "photo";
+  }
+}
